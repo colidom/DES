@@ -18,5 +18,8 @@ $var1 = 100;
 $var2 = &$var1; // asignación por referencia
 $var3 = $var1; // asignación por copia
 echo "$var2<br>"; // mustra 100
-$var2 = 300;
 echo "$var1 $var2<br>"; // muestra 300 300
+
+echo "var2 vale: " . $var2 . " antes de modificar valor<br>";
+$var1 = 105;
+echo "var2 vale: " . $var2 . " después de modificar valor<br>";
