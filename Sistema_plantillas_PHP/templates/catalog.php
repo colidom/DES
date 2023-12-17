@@ -1,5 +1,6 @@
 <section class="container">
-    <h1>Catálogo</h1>
+    <h1 class="display-4"><?php echo $title ?></h1>
+    <hr>
 
     <!-- Sección de Novedades -->
     <div class="row catalogo">
