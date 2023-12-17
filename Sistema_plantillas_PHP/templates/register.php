@@ -1,16 +1,22 @@
 <section class="container">
     <h1 class="display-4">Registro</h1>
-    <form>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <form class="col-md-6">
+        <div class="mb-3">
+            <label for="user" class="form-label">Usuario:</label>
+            <input type="text" class="form-control" id="user" name="user" required>
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="text" class="form-control" id="email" name="email" required>
         </div>
-
-        <button type="submit" class="btn btn-primary mt-5">Registrarse</button>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña:</label>
+            <input type="text" class="form-control" id="password" name="password" required>
+        </div>
+        <div class="mb-3">
+            <label for="password2" class="form-label">Repetir contraseña:</label>
+            <input type="text" class="form-control" id="password2" name="password2" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar</button>
     </form>
 </section>
