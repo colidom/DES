@@ -1,6 +1,6 @@
 <?php
 // Obtener la ruta de la URL
-$url = $_SERVER['REQUEST_URI'];
+$url = strtok($_SERVER["REQUEST_URI"], '?'); // Obtener la URL sin los parámetros GET
 
 // Enrutamiento simple basado en la URL
 switch ($url) {
@@ -13,6 +13,7 @@ switch ($url) {
         $title = 'Iniciar Sesión';
         break;
     case '/register':
+        // Si la URL es /register sin parámetros, se manejará aquí
         $page = 'register';
         $title = 'Registrarse';
         break;
@@ -26,7 +27,6 @@ switch ($url) {
         echo 'Página no encontrada';
         exit();
 }
-
 ?>
 
 <!DOCTYPE html>
