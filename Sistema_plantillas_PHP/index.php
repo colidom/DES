@@ -1,10 +1,32 @@
 <?php
-// Definir las variables
-$page = isset($_GET['page']) ? $_GET['page'] : 'home';
-$title = "Título de la Página";
+// Obtener la ruta de la URL
+$request = $_SERVER['REQUEST_URI'];
 
-// Luego, incluir el código HTML
+// Enrutamiento simple basado en la URL
+switch ($request) {
+    case '/':
+        $page = 'home';
+        break;
+    case '/login':
+        $page = 'login';
+        break;
+    case '/register':
+        $page = 'register';
+        break;
+    case '/catalog':
+        $page = 'catalog';
+        break;
+    default:
+        // Manejo de rutas no encontradas
+        http_response_code(404);
+        echo 'Página no encontrada';
+        exit();
+}
+
+// Resto del código para incluir el header, contenido y footer según la página
+// ...
 ?>
+
 <!DOCTYPE html>
 <html>
 
