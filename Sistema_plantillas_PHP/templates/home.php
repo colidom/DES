@@ -9,6 +9,5 @@
                 </div>
             </div>
         </div>
-        <!-- Agregar más tarjetas según sea necesario -->
     </div>
 </section>
