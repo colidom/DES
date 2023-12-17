@@ -40,7 +40,7 @@ switch ($url) {
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <?php include 'templates/header.php'; ?>
     <?php include 'templates/' . $page . '.php'; ?>
     <?php include 'templates/footer.php'; ?>
