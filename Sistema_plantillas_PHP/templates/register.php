@@ -1,5 +1,6 @@
 <section class="container">
-    <h1 class="display-4">Registro</h1>
+    <h1 class="display-4"><?php echo $title ?></h1>
+    <hr>
     <form class="col-md-6">
         <div class="mb-3">
             <label for="user" class="form-label">Usuario:</label>

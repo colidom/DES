@@ -1,5 +1,6 @@
 <section class="container">
-    <h1 class="display-4">Iniciar Sesión</h1>
+    <h1 class="display-4"><?php echo $title ?></h1>
+    <hr>
     <form action="procesar_login.php" method="POST" class="col-md-6">
         <div class="mb-3">
             <label for="user" class="form-label">Usuario:</label>
