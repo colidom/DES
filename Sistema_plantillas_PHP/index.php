@@ -23,8 +23,6 @@ switch ($request) {
         exit();
 }
 
-// Resto del código para incluir el header, contenido y footer según la página
-// ...
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +30,6 @@ switch ($request) {
 
 <head>
     <title><?php echo $title; ?></title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -42,7 +39,6 @@ switch ($request) {
     <?php include 'templates/' . $page . '.php'; ?>
     <?php include 'templates/footer.php'; ?>
 
-    <!-- Bootstrap JS (si es necesario) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
