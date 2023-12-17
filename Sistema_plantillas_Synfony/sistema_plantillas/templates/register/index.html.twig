@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+{% set user = app.request.get('user') ?: '' %}
+{% set email = app.request.get('email') ?: '' %}
+{% set password = app.request.get('password') ?: '' %}
+{% set password2 = app.request.get('password2') ?: '' %}
+
+{% set passwords_match = password == password2 %}
+{% set message = '' %}
+
+{% if passwords_match %}
+    {% set message = 'Las contraseñas coinciden' %}
+{% else %}
+    {% set message = 'Las contraseñas no coinciden' %}
+{% endif %}
+
+<section class="container">
+    <h1 class="display-4">{{ title }}</h1>
+    <hr>
+    <form class="col-md-6" method="POST">
+        <div class="mb-3">
+            <label for="user" class="form-label">Usuario:</label>
+            <input type="text" class="form-control" id="user" name="user" value="{{ user }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{ email }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña:</label>
+            <input type="password" class="form-control" id="password" name="password" value="{{ password }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="password2" class="form-label">Repetir contraseña:</label>
+            <input type="password" class="form-control" id="password2" name="password2" value="{{ password2 }}" required>
+        </div>
+        {% if passwords_match %}
+            <div class="alert alert-success" id="successMessage">{{ message }}</div>
+        {% else %}
+            <div class="alert alert-danger" id="errorMessage">{{ message }}</div>
+        {% endif %}
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</section>
+
+<script>
+    setTimeout(function() {
+        document.getElementById('successMessage').style.display = 'none';
+        document.getElementById('errorMessage').style.display = 'none';
+    }, 5000);
+</script>
