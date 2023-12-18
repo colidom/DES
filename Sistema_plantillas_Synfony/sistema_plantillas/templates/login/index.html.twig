@@ -3,6 +3,8 @@
 {% block title %}Iniciar Sesión{% endblock %}
 
 {% block body %}
+{% include 'header.html.twig' %}
+
 <section class="container">
     <h1 class="display-4">{{ title }}</h1>
     <hr>
@@ -19,4 +21,5 @@
         <button type="submit" class="btn btn-primary">Entrar</button>
     </form>
 </section>
+{% include 'footer.html.twig' %}
 {% endblock %}

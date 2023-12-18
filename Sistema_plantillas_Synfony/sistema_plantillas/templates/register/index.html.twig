@@ -21,6 +21,8 @@
     {% set message = 'Las contraseñas no coinciden' %}
 {% endif %}
 
+{% block body %}
+{% include 'header.html.twig' %}
 <section class="container">
     <h1 class="display-4">{{ title }}</h1>
     <hr>
@@ -56,3 +58,5 @@
         document.getElementById('errorMessage').style.display = 'none';
     }, 5000);
 </script>
+{% include 'footer.html.twig' %}
+{% endblock %}

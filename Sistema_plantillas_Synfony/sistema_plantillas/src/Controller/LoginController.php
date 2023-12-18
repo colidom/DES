@@ -18,7 +18,7 @@ class LoginController extends AbstractController
     {
         $title = 'Iniciar Sesión';
 
-        return $this->render('login/login.html.twig', [
+        return $this->render('login/index.html.twig', [
             'title' => $title,
         ]);
     }
