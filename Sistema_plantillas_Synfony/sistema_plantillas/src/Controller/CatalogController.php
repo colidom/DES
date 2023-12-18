@@ -15,8 +15,8 @@ class CatalogController extends AbstractController
     {
         $title = 'Catálogo';
 
-        return $this->render('catalog/index.html.twig', [
-            'title' => $title,
+        return $this->render('catalog/catalog.html.twig', [
+            'title' => $title
         ]);
     }
 }
