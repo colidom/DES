@@ -1,3 +1,8 @@
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="zoomedImage">
+</div>
+
 <section class="container">
     <h1 class="display-4"><?php echo $title ?></h1>
     <hr>
