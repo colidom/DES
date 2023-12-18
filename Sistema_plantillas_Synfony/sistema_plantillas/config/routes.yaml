@@ -7,3 +7,12 @@ controllers:
 register:
     path: /register
     controller: App\Controller\RegisterController::index
+
+login:
+    path: /login
+    controller: App\Controller\LoginController::login
+
+process_login:
+    path: /process_login
+    controller: App\Controller\LoginController::processLogin
+    methods: ['POST']
