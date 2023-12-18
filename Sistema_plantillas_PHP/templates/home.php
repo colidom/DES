@@ -1,7 +1,7 @@
 <body>
     <div class="container">
         <!-- Titular principal de la página -->
-        <h1><?php echo $title; ?></h1>
+        <h1 class="display-4"><?php echo $title ?></h1>
         <hr>
         <!-- Bloques de banners promocionales -->
         <div class="row">
