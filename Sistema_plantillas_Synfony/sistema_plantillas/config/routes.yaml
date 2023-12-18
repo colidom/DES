@@ -19,4 +19,8 @@ login:
 process_login:
     path: /process_login
     controller: App\Controller\LoginController::processLogin
-    methods: ['POST']
+    methods: ["POST"]
+
+catalog:
+    path: /catalog
+    controller: App\Controller\CatalogController::index

@@ -1,5 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catálogo{% endblock %}
+
+{% block body %}
+{% include 'header.html.twig' %}
 <section class="container">
-    <h1 class="display-4"><?php echo $title ?></h1>
+    <h1 class="display-4">{{ title }}</h1>
     <hr>
 
     <!-- Sección de Novedades -->
@@ -166,3 +172,5 @@
         </div>
     </div>
 </section>
+{% include 'footer.html.twig' %}
+{% endblock %}
