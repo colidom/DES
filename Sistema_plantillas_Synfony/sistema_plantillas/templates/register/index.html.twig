@@ -12,15 +12,6 @@
 {% set password = app.request.get('password') ?: '' %}
 {% set password2 = app.request.get('password2') ?: '' %}
 
-{% set passwords_match = password == password2 %}
-{% set message = '' %}
-
-{% if passwords_match %}
-    {% set message = 'Las contraseñas coinciden' %}
-{% else %}
-    {% set message = 'Las contraseñas no coinciden' %}
-{% endif %}
-
 {% block body %}
 {% include 'header.html.twig' %}
 <section class="container">
@@ -56,7 +47,7 @@
     setTimeout(function() {
         document.getElementById('successMessage').style.display = 'none';
         document.getElementById('errorMessage').style.display = 'none';
-    }, 5000);
+    }, 2000);
 </script>
 {% include 'footer.html.twig' %}
 {% endblock %}

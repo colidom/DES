@@ -16,8 +16,8 @@ class RegisterController extends AbstractController
         $title = 'Registrarse';
         $user = '';
         $email = '';
-        $password = '';
-        $password2 = '';
+        $password = isset($_POST['password']) ? $_POST['password'] : '';
+        $password2 = isset($_POST['password2']) ? $_POST['password2'] : '';
         $passwords_match = false;
         $message = '';
 
