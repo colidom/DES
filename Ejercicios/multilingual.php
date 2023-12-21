@@ -32,29 +32,7 @@ $botonMostrado = $textoBoton[$lang];
 <head>
     <meta charset="UTF-8">
     <title>Ejemplo de Cambio de Idioma con Cookies</title>
-    <style>
-        /* Estilos para el botón */
-        .language-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            text-decoration: none;
-            background-color: #3498db;
-            color: #fff;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .language-button:hover {
-            background-color: #2980b9;
-        }
-
-        /* Estilos para el contenedor */
-        .container {
-            text-align: center;
-            margin-top: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
