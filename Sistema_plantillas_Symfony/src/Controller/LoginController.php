@@ -12,7 +12,7 @@ class LoginController extends AbstractController
     public function index(): Response
     {
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ('POST' === $_SERVER['REQUEST_METHOD']) {
             // Get the login credentials from the request body
             $username = $_POST["user"];
             $password = $_POST["password"];
