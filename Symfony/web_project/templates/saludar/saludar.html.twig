@@ -2,7 +2,9 @@
 <section>
     {% if mensaje is defined %}
     <p>{{ mensaje }}</p>
-    {% endif %} {% if mostrarFormulario %}
+    {% if mostrarBotonVolver %}
+    <a href="{{ path('saludar') }}" class="btn btn-primary">Volver</a>
+    {% endif %} {% endif %} {% if mostrarFormulario %}
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}

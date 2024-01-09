@@ -22,6 +22,7 @@ class SaludarController extends AbstractController
 
         $mostrarFormulario = true;
         $mensaje = '';
+        $mostrarBotonVolver = false;
 
         if ($form->isSubmitted() && $form->isValid()) {
             $datos = $form->getData();
@@ -29,13 +30,15 @@ class SaludarController extends AbstractController
             $apellido = $datos['apellido'];
             $mensaje = "Hola $nombre $apellido";
             $mostrarFormulario = false;
+            $mostrarBotonVolver = true;
         }
 
         return $this->render('/saludar/saludar.html.twig', [
             'title' => 'Saludar',
             'form' => $form->createView(),
             'mensaje' => $mensaje,
-            'mostrarFormulario' => $mostrarFormulario
+            'mostrarFormulario' => $mostrarFormulario,
+            'mostrarBotonVolver' => $mostrarBotonVolver
         ]);
     }
 }
