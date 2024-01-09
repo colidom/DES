@@ -10,11 +10,12 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class FactorialController extends AbstractController
 {
-    #[Route('/factorial/{numero}')]
+    #[Route('/factorial/{numero}', name: "factorial")]
     public function factorial($numero)
     {
         $resultado = $this->calcula_factorial($numero);
         return $this->render('factorial/factorial.html.twig', [
+            'title' => "Factorial",
             'numero' => $numero,
             'resultado' => $resultado
         ]);
@@ -25,7 +26,7 @@ class FactorialController extends AbstractController
         if ($numero < 0) {
             return false;
         }
-        if ($numero == 0) {
+        if (0 == $numero) {
             return 1;
         } else {
             return $numero * $this->calcula_factorial($numero - 1);
