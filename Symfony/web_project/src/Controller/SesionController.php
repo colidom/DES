@@ -10,7 +10,7 @@ class SesionController extends AbstractController
     #[Route('/setSesion', name: "setSesion")]
     public function setSesion(SessionInterface $session)
     {
-        $session->set("variable", 100);
+        $session->set("variable", "Hola Mundo desde \$_SESSION");
         return $this->redirectToRoute('getSesion', [
         ]);
     }
