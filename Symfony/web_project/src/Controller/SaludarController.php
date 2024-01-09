@@ -11,23 +11,31 @@ use Symfony\Component\Routing\Annotation\Route;
 class SaludarController extends AbstractController
 {
     #[Route('/saludar', name: "saludar")]
-    public function saludar(Request $request)
+    public function saludar(Request $request): Response
     {
         $form = $this->createFormBuilder()
             ->add('nombre', TextType::class)
             ->add('apellido', TextType::class)
-            ->add('enviar', SubmitType::class, array('label' => 'Enviar'))
+            ->add('enviar', SubmitType::class, ['label' => 'Enviar'])
             ->getForm();
         $form->handleRequest($request);
 
+        $mostrarFormulario = true;
+        $mensaje = '';
+
         if ($form->isSubmitted() && $form->isValid()) {
             $datos = $form->getData();
-            return new Response("Hola " . $datos['nombre'] . ' ' . $datos['apellido']);
+            $nombre = $datos['nombre'];
+            $apellido = $datos['apellido'];
+            $mensaje = "Hola $nombre $apellido";
+            $mostrarFormulario = false;
         }
 
         return $this->render('/saludar/saludar.html.twig', [
-            'form' => $form->createView()
+            'title' => 'Saludar',
+            'form' => $form->createView(),
+            'mensaje' => $mensaje,
+            'mostrarFormulario' => $mostrarFormulario
         ]);
     }
-
 }

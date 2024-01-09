@@ -1,3 +1,11 @@
-{{ form_start(form) }}
-{{ form_widget(form) }}
-{{ form_end(form) }}
+{% extends 'base.html.twig' %} {% block title %}{{ title }}{% endblock %} {% block body %}
+<section>
+    {% if mensaje is defined %}
+    <p>{{ mensaje }}</p>
+    {% endif %} {% if mostrarFormulario %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+    {% endif %}
+</section>
+{% endblock %}
