@@ -43,9 +43,14 @@ switch ($url) {
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <?php include 'templates/header.php'; ?>
-    <?php include 'templates/' . $page . '.php'; ?>
-    <?php include 'templates/footer.php'; ?>
+    <!-- Ventana modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoomedImage">
+    </div>
+    <?php include 'templates/header.php';?>
+    <?php include 'templates/' . $page . '.php';?>
+    <?php include 'templates/footer.php';?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

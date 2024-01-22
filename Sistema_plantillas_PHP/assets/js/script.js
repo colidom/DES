@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".catalogo--card img").on("click", function () {
+    $(".card img").on("click", function () {
         var imageUrl = $(this).attr("src");
         $("#zoomedImage").attr("src", imageUrl);
         $("#imageModal").css("display", "block");
