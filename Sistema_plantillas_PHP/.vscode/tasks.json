@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Starting PHP Dev Server",
+            "type": "shell",
+            "command": "php -S localhost:3000",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        }
+    ]
+}
