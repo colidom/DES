@@ -160,6 +160,7 @@ class Restaurante implements UserInterface, \Serializable
     {
         return $this->getCorreo();
     }
+
     public function eraseCredentials()
     {
         return;
