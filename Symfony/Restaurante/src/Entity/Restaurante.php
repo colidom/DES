@@ -1,6 +1,5 @@
 <?php
 // src/Entity/Restaurante.php
-use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -10,6 +9,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @ORM\Entity(repositoryClass="RestaurantRepository")
  */
 class Restaurante implements UserInterface, \Serializable
+
 {
     /**
      * @ORM\Id
@@ -121,23 +121,23 @@ class Restaurante implements UserInterface, \Serializable
         $this->rol = $rol;
     }
 
-
     public function serialize()
     {
         return serialize(
             array(
                 $this->id,
                 $this->correo,
-                $this->clave,
+                $this->clave
             )
         );
     }
+
     public function unserialize($serialized)
     {
         list(
             $this->id,
             $this->correo,
-            $this->clave,
+            $this->clave
         ) = unserialize($serialized);
     }
 
@@ -150,10 +150,12 @@ class Restaurante implements UserInterface, \Serializable
     {
         return $this->getClave();
     }
+
     public function getSalt()
     {
         return;
     }
+
     public function getUsername()
     {
         return $this->getCorreo();
