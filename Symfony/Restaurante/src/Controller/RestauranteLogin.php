@@ -11,6 +11,9 @@ class RestauranteLogin extends AbstractController
     #[Route("/loginbd", "loginbd")]
     public function loginbd()
     {
-        return $this->render('loginbd.html.twig');
+        $username = "Colidom";
+        return $this->render('loginbd.html.twig', [
+            'username' => $username
+        ]);
     }
 }

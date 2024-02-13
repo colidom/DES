@@ -25,9 +25,10 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="text-center">Inicio de Sesión</h3>
+                    <span>Hola {{ username }}</span>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form method="POST" action="{{ path('login') }}">
                         <div class="form-group">
                             <label for="username">Usuario:</label>
                             <input type="text" class="form-control" id="username" placeholder="Ingrese su usuario" />
