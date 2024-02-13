@@ -1,0 +1,29 @@
+security:
+    providers:
+        restaurantes:
+            entity:
+                class: App\Entity\RestauranteBidireccional
+                property: correo
+            encoders:
+                App\Entity\Restaurante: plaintext
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: true
+            form_login:
+                login_path: login_path
+                check_path: check_path
+                default_target_path: pagina_usuario
+            provider: pedidos
+
+    pedidos:
+        entity:
+            class: App\Entity\RestauranteBidireccional
+            property: correo
+        encoders:
+            App\Entity\Restaurante:
+                algorithm: plaintext

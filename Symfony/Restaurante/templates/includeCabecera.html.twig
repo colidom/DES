@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>IncludeHeader</title>
+	</head>
+	<body>
+		<header>
+			{{ include('header.html.twig') }}
+		</header>
+		<hr>
+		{% block body %}{% endblock %}
+		<hr>
+		<footer>
+			{{ include('footer.html.twig') }}
+		</footer>
+	</body>
+</html>

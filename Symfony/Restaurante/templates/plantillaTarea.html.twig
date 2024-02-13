@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ruta}}</title>
+	</head>
+	<body>
+		{#El body es necesario para las plantillas con herencias#}
+		{# ruta es la variable que envia el controlador que indica que tipo de pagina quiere que se le muestre al usuario #}
+			{% block body %}
+				{% if ruta == "index" %}
+				{{ include('index.html.twig') }}
+			{% elseif ruta == "login" %}
+				{{ include('login.html.twig') }}
+			{% elseif ruta == "registro" %}
+				{{ include('registro.html.twig') }}
+			{% elseif ruta == "catalogo" %}
+				{{ include('catalogo.html.twig') }}
+			{% endif %}
+		{% endblock %}
+	</body>
+</html>

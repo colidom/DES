@@ -1,0 +1,37 @@
+[09-Feb-2024 14:51:11 UTC] PHP Fatal error:  Uncaught LogicException: The annotation metadata driver cannot be enabled because the "doctrine/annotations" library is not installed. Please run "composer require doctrine/annotations" or choose a different metadata driver. in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\orm\lib\Doctrine\ORM\Configuration.php:190
+Stack trace:
+#0 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\orm\lib\Doctrine\ORM\Tools\Setup.php(93): Doctrine\ORM\Configuration->newDefaultAnnotationDriver(Array, false)
+#1 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\config\bootstrap.php(16): Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(Array, true, NULL, NULL, false)
+#2 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\config\cli-config.php(4): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\orm\bin\doctrine.php(51): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\orm\bin\doctrine(4): include('C:\\xampp\\htdocs...')
+#5 {main}
+  thrown in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\orm\lib\Doctrine\ORM\Configuration.php on line 190
+[09-Feb-2024 14:55:10 UTC] PHP Warning:  require_once(/.src /Restaurante.php): Failed to open stream: Permission denied in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\ejemplo1.php on line 2
+[09-Feb-2024 14:55:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/.src /Restaurante.php' (include_path='.;C:\php\pear') in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\ejemplo1.php:2
+Stack trace:
+#0 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\persistence\src\Persistence\Mapping\Driver\ColocatedMappingDriver.php(188): require_once()
+#1 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\orm\lib\Doctrine\ORM\Tools\Console\Command\InfoCommand.php(48): Doctrine\ORM\Mapping\Driver\AnnotationDriver->getAllClassNames()
+#2 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\orm\lib\Doctrine\ORM\Tools\Console\CommandCompatibility.php(32): Doctrine\ORM\Tools\Console\Command\InfoCommand->doExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\symfony\console\Command\Command.php(326): Doctrine\ORM\Tools\Console\Command\InfoCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\symfony\console\Application.php(1063): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\symfony\console\Application.php(320): Symfony\Component\Console\Application->doRunCommand(Object(Doctrine\ORM\Tools\Console\Command\InfoCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\symfony\console\Application.php(174): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\orm\lib\Doctrine\ORM\Tools\Console\ConsoleRunner.php(51): Symfony\Component\Console\Application->run()
+#8 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\orm\bin\doctrine.php(62): Doctrine\ORM\Tools\Console\ConsoleRunner::run(Object(Symfony\Component\Console\Helper\HelperSet), Array)
+#9 C:\xampp\htdocs\pruebas\proyecto_ejemplo1\vendor\doctrine\orm\bin\doctrine(4): include('C:\\xampp\\htdocs...')
+#10 {main}
+  thrown in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\ejemplo1.php on line 2
+[12-Feb-2024 15:16:08 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:21:44 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:22:28 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:22:42 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:23:32 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:23:51 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:24:16 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:26:40 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:27:02 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:27:05 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:27:25 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:27:49 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
+[12-Feb-2024 15:58:12 UTC] PHP Fatal error:  Declaration of Restaurante::getRoles() must be compatible with Symfony\Component\Security\Core\User\UserInterface::getRoles(): array in C:\xampp\htdocs\pruebas\proyecto_ejemplo1\src\Entity\Restaurante.php on line 143
